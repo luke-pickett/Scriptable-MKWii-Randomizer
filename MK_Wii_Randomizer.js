@@ -2,7 +2,7 @@ const widget = new ListWidget();
 
 let textField = new Alert();
 textField.title = "How many races?";
-textField.addCancelAction("Cancel");
+textField.setNumberPadKeyboard()
 textField.addAction("OK");
 textField.addTextField("","");
 
