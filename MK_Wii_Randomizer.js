@@ -19,6 +19,10 @@ await textField.present();
 let input = textField.textFieldValue(0);
 ///////////////////////////////////
 
+if (input > mapList.length){
+    Script.complete()
+}
+
 for (i=0; i<parseInt(input, 10); i++) {
     let row = widget.addStack();
     row.layoutHorizontally();
