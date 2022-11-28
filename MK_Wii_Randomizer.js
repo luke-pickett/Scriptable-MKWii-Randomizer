@@ -10,17 +10,22 @@ function getRandomInt(max){
 
 
 // Sets a int input from the user //
-let textField = new Alert();
-textField.title = "How many races?";
-textField.addAction("OK");
-let numField = textField.addTextField("8");
-numField.setNumberPadKeyboard()
-await textField.present();
-let input = textField.textFieldValue(0);
+async function getInput(){
+    let textField = new Alert();
+    textField.title = "How many races?";
+    textField.addAction("OK");
+    let numField = textField.addTextField("8");
+    numField.setNumberPadKeyboard()
+    await textField.present();
+    let input = textField.textFieldValue(0);
+}
 ///////////////////////////////////
 
-if (input > mapList.length){
-    Script.complete()
+
+getInput()
+
+while (input > mapList.length){
+    getInput()
 }
 
 for (i=0; i<parseInt(input, 10); i++) {
