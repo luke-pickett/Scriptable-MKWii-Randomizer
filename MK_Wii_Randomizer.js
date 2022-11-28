@@ -16,7 +16,8 @@ for (i=0; i<parseInt(input, 10); i++) {
     row.layoutHorizontally();
 
     let text = row.addText("Test");
-    text.font = Font.systemFont(36);
+    text.font = Font.boldSystemFont(20);
+    text.minimumScaleFactor = 0.5
     text.textColor = Color.white();
 }
 
