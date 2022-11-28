@@ -15,7 +15,7 @@ for (i=0; i<parseInt(input, 10); i++) {
     let row = widget.addStack();
     row.layoutHorizontally();
 
-    let text = row.addText("Test");
+    let text = row.addText(mapList[i].toString());
     text.font = Font.boldSystemFont(20);
     text.minimumScaleFactor = 0.5
     text.textColor = Color.white();
@@ -25,4 +25,4 @@ Script.setWidget(widget);
 Script.complete();
 
 // for preview
-widget.presentMedium();
+widget.presentLarge();
