@@ -2,9 +2,9 @@ const widget = new ListWidget();
 
 let textField = new Alert();
 textField.title = "How many races?";
-textField.setNumberPadKeyboard()
 textField.addAction("OK");
-textField.addTextField("","");
+let numField = textField.addTextField(8);
+numField.setNumberPadKeyboard()
 
 await textField.present();
 let input = textField.textFieldValue(0);
