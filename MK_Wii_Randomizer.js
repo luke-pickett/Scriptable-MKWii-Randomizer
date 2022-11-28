@@ -1,5 +1,13 @@
 const widget = new ListWidget();
 const mapList = [1,2,3,4,5,6,7,8,9,10]
+let usedMaps = new Array()
+
+
+function getRandomInt(max){
+    let randomizedInt = Math.floor(Math.random() * max)
+    return randomizedInt
+}
+
 
 // Sets a int input from the user //
 let textField = new Alert();
@@ -15,7 +23,14 @@ for (i=0; i<parseInt(input, 10); i++) {
     let row = widget.addStack();
     row.layoutHorizontally();
 
-    let text = row.addText(mapList[i].toString());
+    while(true){
+        randomMap = mapList[getRandomInt(mapList.length)]
+        if(usedMaps.includes(randomMap) == false){
+            usedMaps.push(randomMap)
+            break
+        }
+    }
+    let text = row.addText(randomMap.toString());
     text.font = Font.boldSystemFont(20);
     text.minimumScaleFactor = 0.5
     text.textColor = Color.white();
