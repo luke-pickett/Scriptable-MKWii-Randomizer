@@ -1,4 +1,5 @@
 const widget = new ListWidget();
+
 const mapList = ["Luigi Circuit - Mushroom",
 "Moo Moo Meadows - Mushroom",
 "Mushroom Gorge - Mushroom",
@@ -27,6 +28,17 @@ const mapList = ["Luigi Circuit - Mushroom",
 "DS Peach Gardens - Lightning",
 "GCN DK Mountain - Lightning",
 "N64 Bowser's Castle - Lightning"]
+
+const cupDictionary = {
+    "Mushroom" : Color.red(),
+    "Flower" : Color.orange(),
+    "Star" : Color.yellow(),
+    "Special" : new Color("#ffc800"),
+    "Banana" : new Color("#eaff00"),
+    "Leaf" : Color.brown(),
+    "Lightning" : Color.yellow()
+}
+
 let usedMaps = new Array()
 
 
@@ -60,7 +72,7 @@ for (i=0; i<parseInt(input, 10); i++) {
     let text = row.addText(randomMap);
     text.font = Font.boldSystemFont(20);
     text.minimumScaleFactor = 0.5
-    text.textColor = Color.white();
+    text.textColor = cupDictionary["Banana"];
 }
 
 Script.setWidget(widget);
