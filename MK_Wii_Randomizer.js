@@ -126,8 +126,8 @@ for (i=0; i<parseInt(input, 10); i++) {
     text.font = Font.boldSystemFont(20);
     text.minimumScaleFactor = 0.5
     text.textColor = cupDictionary[randomMap.split('- ').pop()];
-    text.shadowColor = Colors.white()
-    text.shadowRadius = 0.5
+    text.shadowColor = Color.white()
+    text.shadowRadius = 0.2
 }
 
 Script.setWidget(widget);
