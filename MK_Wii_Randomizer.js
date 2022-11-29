@@ -56,7 +56,7 @@ const mapList = ["Luigi Circuit - Mushroom",
 "N64 Rainbow Road - Lava Bubble",
 "3DS Shy Guy's Market - Cloud Flower",
 "N64 Yoshi Valley - Green Star",
-"3DS Wugu Island - Shy Guy",
+"3DS Wuhu Island - Shy Guy",
 "3DS Rainbow Road: Solar Edition - Piranha Plant"]
 
 const cupDictionary = {
