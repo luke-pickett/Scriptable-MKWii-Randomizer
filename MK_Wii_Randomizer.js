@@ -72,7 +72,7 @@ for (i=0; i<parseInt(input, 10); i++) {
     let text = row.addText(randomMap);
     text.font = Font.boldSystemFont(20);
     text.minimumScaleFactor = 0.5
-    text.textColor = cupDictionary["Banana"];
+    text.textColor = cupDictionary[randomMap.split('- ').pop()];
 }
 
 Script.setWidget(widget);
